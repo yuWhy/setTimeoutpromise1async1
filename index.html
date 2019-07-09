@@ -1,1 +1,52 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+   
+</div>
+<script>
+    ///////////////////////////////////
+    console.log('script start')
+    setTimeout(function(){
+        console.log('settimeout')
+    })
+
+    let promise1 = new Promise(function (resolve) {
+        console.log('promise1')
+        resolve()
+        console.log('promise1 end')
+    }).then(function () {
+        console.log('promise2')
+    })
+    async function async1(){
+        console.log('async1 start');
+        await async2();
+        console.log('async1 end')
+    }
+    async function async2(){
+        console.log('async2')
+    }
+    async1();
+    console.log('script end')
+    //////////////////////////////////////
+    // console.log('////////////////////////////////////////');
+    // async function async1(){
+    //     console.log('async1 start');
+    //     await async2();
+    //     console.log('async1 end')
+    // }
+    // async function async2(){
+    //     console.log('async2')
+    // }
+    // console.log('script start');
+    // async1();
+    // console.log('script end')
+</script>
+</body>
+</html>
+
+
